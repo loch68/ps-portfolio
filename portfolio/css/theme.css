@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap");
+
+:root {
+  --primary: #4a9eff;
+  --secondary: #0f1419;
+  --dark: #e8eaf0;
+  --light-text: #b0b8c5;
+  --highlight: #8a7aff;
+  --success: #10b981;
+  --surface: #1a1f2e;
+  --muted: rgba(176, 184, 197, 0.6);
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow-soft: 0 25px 60px rgba(0, 0, 0, 0.3);
+  --font-body: "Inter", "Roboto", sans-serif;
+  --font-heading: "Poppins", "Inter", sans-serif;
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.6rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--light-text);
+  background-color: #0a0e14;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--dark);
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight);
+}
+
+/* Text utilities */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-dark {
+  color: var(--dark) !important;
+}
+
+.text-muted {
+  color: var(--muted) !important;
+}
+
+.text-highlight {
+  color: var(--highlight) !important;
+}
+
+.text-success {
+  color: var(--success) !important;
+}
+
+.text-light {
+  color: #fff !important;
+}
+
+/* Background utilities */
+.bg-primary {
+  background-color: var(--primary) !important;
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.bg-surface {
+  background-color: var(--surface) !important;
+}
+
+.bg-dark {
+  background-color: var(--dark) !important;
+  color: #fff;
+}
+
+.bg-highlight {
+  background-color: var(--highlight) !important;
+  color: #fff;
+}
+
+.bg-success {
+  background-color: var(--success) !important;
+  color: #fff;
+}
+
+/* Spacing utilities */
+.p-xs {
+  padding: var(--space-xs) !important;
+}
+
+.p-sm {
+  padding: var(--space-sm) !important;
+}
+
+.p-md {
+  padding: var(--space-md) !important;
+}
+
+.p-lg {
+  padding: var(--space-lg) !important;
+}
+
+.p-xl {
+  padding: var(--space-xl) !important;
+}
+
+.pt-md {
+  padding-top: var(--space-md) !important;
+}
+
+.pb-md {
+  padding-bottom: var(--space-md) !important;
+}
+
+.px-md {
+  padding-inline: var(--space-md) !important;
+}
+
+.py-lg {
+  padding-block: var(--space-lg) !important;
+}
+
+.m-sm {
+  margin: var(--space-sm) !important;
+}
+
+.mt-md {
+  margin-top: var(--space-md) !important;
+}
+
+.mb-md {
+  margin-bottom: var(--space-md) !important;
+}
+
+.mt-lg {
+  margin-top: var(--space-lg) !important;
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg) !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Borders & radius */
+.rounded-sm {
+  border-radius: var(--radius-sm) !important;
+}
+
+.rounded-md {
+  border-radius: var(--radius-md) !important;
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg) !important;
+}
+
+.bordered {
+  border: 1px solid var(--border);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+/* Responsive helpers */
+@media (max-width: 1024px) {
+  :root {
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .p-lg,
+  .py-lg {
+    padding: var(--space-md) !important;
+  }
+
+  .mt-lg,
+  .mb-lg {
+    margin: var(--space-md) !important;
+  }
+}
